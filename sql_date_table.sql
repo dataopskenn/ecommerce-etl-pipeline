@@ -9,9 +9,9 @@ CREATE TABLE IF NOT EXISTS dataopskenn_staging.dim_dates
         public_holiday           BOOLEAN NOT NULL
     );
     
-    ALTER TABLE user_9999_staging.dim_dates
-    OWNER to postgres;
-    INSERT INTO user_9999_staging.dim_dates
+ALTER TABLE user_9999_staging.dim_dates
+OWNER to postgres;
+INSERT INTO user_9999_staging.dim_dates
     SELECT 
        datum AS calendar_dt,
        EXTRACT(YEAR FROM datum) AS year_num,
