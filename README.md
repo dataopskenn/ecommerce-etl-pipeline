@@ -2,10 +2,7 @@
 <img src = "/images/data model.png" alt="Data2Bots LinkedIn Logo"/>
 </p>
 
-# `d2b_assessment`
-## private d2b assessment
-
-The solution to this assessment is divided into two separate parts;
+The solution to this problem is divided into two separate parts;
 
 - ### Infrastructure as Code (IaC) using terraform
 The intention for this is to build a terraform managed AWS Postgres Data Warehouse. However, this part will not be executed as all of the fields needed have been provided for.
