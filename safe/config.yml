@@ -1,0 +1,6 @@
+POSTGRES_CONFIG:
+  host: host.avail-zone-1.rds.amazonaws.com
+  dbname: database-name
+  user: account-username
+  password: account-password #change password
+  port: '5432' #postgres default port, change this where necessary
