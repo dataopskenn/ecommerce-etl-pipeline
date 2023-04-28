@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS dataopskenn_staging.dim_dates
+CREATE TABLE IF NOT EXISTS username_staging.dim_dates
     (
         calendar_dt              DATE NOT NULL CONSTRAINT dim_dates_pk PRIMARY KEY,
         year_num                 BIGINT NOT NULL,
@@ -9,9 +9,9 @@ CREATE TABLE IF NOT EXISTS dataopskenn_staging.dim_dates
         public_holiday           BOOLEAN NOT NULL
     );
     
-ALTER TABLE user_9999_staging.dim_dates
+ALTER TABLE username_staging.dim_dates
 OWNER to postgres;
-INSERT INTO user_9999_staging.dim_dates
+INSERT INTO username_staging.dim_dates
     SELECT 
        datum AS calendar_dt,
        EXTRACT(YEAR FROM datum) AS year_num,
