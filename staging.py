@@ -47,7 +47,7 @@ def process_orders_data(cur, conn, file):
     )
 
     df.to_sql(
-        'orders', engine, schema='username_staging', 
+        'orders', engine, schema='user_staging', 
         if_exists='append', index=False
     )
 
@@ -58,7 +58,7 @@ def process_orders_data(cur, conn, file):
 
 def process_reviews_data(cur, conn, file):
     """
-    Repeating the same process as above, difference is in the query specified to execute
+    Repeating the same process as above, the difference is in the query specified to execute
     """
 
     reviews_key = 'orders_data/reviews.csv'
@@ -75,7 +75,7 @@ def process_reviews_data(cur, conn, file):
     )
 
     df.to_sql(
-        'reviews', engine, schema='username_staging', 
+        'reviews', engine, schema='user_staging', 
         if_exists='append', index=False
     )
 
@@ -86,7 +86,7 @@ def process_reviews_data(cur, conn, file):
 
 def process_customers_data(cur, conn, file):
     """
-    Repeating the same process as above, difference is in the query specified to execute
+    Repeating the same process as above, the difference is in the query specified to execute
     """
 
     customers_key = 'orders_data/dim_customers.csv'
@@ -103,7 +103,7 @@ def process_customers_data(cur, conn, file):
     )
 
     df.to_sql(
-        'dim_customers', engine, schema='username_staging', 
+        'dim_customers', engine, schema='user_staging', 
         if_exists='append', index=False
     )
 
@@ -114,7 +114,7 @@ def process_customers_data(cur, conn, file):
 
 def process_products_data(cur, conn, file):
     """
-    Repeating the same process as above, difference is in the query specified to execute
+    Repeating the same process as above, the difference is in the query specified to execute
     """
 
     products_key = 'orders_data/dim_products.csv'
@@ -131,7 +131,7 @@ def process_products_data(cur, conn, file):
     )
 
     df.to_sql(
-        'dim_products', engine, schema='username_staging', 
+        'dim_products', engine, schema='user_staging', 
         if_exists='append', index=False
     )
 
@@ -142,7 +142,7 @@ def process_products_data(cur, conn, file):
 
 def process_addresses_data(cur, conn, file):
     """
-    Repeating the same process as above, difference is in the query specified to execute
+    Repeating the same process as above, the difference is in the query specified to execute
     """
 
     addresses_key = 'orders_data/dim_addresses.csv'
@@ -159,7 +159,7 @@ def process_addresses_data(cur, conn, file):
     )
 
     df.to_sql(
-        'dim_addresses', engine, schema='username_staging', 
+        'dim_addresses', engine, schema='user_staging', 
         if_exists='append', index=False
     )
 
@@ -170,7 +170,7 @@ def process_addresses_data(cur, conn, file):
 
 def process_shipments_data(cur, conn, file):
     """
-    Repeating the same process as above, difference is in the query specified to execute
+    Repeating the same process as above, the difference is in the query specified to execute
     """
 
     shipment_key = 'orders_data/shipment_deliveries.csv'
@@ -194,7 +194,7 @@ def process_shipments_data(cur, conn, file):
     )
 
     df.to_sql('shipment_deliveries', engine,
-              schema='username_staging', if_exists='replace', index=False
+              schema='user_staging', if_exists='replace', index=False
               )
 
     print(
