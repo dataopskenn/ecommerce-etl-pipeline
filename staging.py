@@ -58,7 +58,7 @@ def process_orders_data(cur, conn, file):
 
 def process_reviews_data(cur, conn, file):
     """
-    Repeating the same process as above,difference is in the query specified to execute
+    Repeating the same process as above, difference is in the query specified to execute
     """
 
     reviews_key = 'orders_data/reviews.csv'
@@ -86,7 +86,7 @@ def process_reviews_data(cur, conn, file):
 
 def process_customers_data(cur, conn, file):
     """
-    Repeating the same process as above,difference is in the query specified to execute
+    Repeating the same process as above, difference is in the query specified to execute
     """
 
     customers_key = 'orders_data/dim_customers.csv'
@@ -114,7 +114,7 @@ def process_customers_data(cur, conn, file):
 
 def process_products_data(cur, conn, file):
     """
-    Repeating the same process as above,difference is in the query specified to execute
+    Repeating the same process as above, difference is in the query specified to execute
     """
 
     products_key = 'orders_data/dim_products.csv'
@@ -142,7 +142,7 @@ def process_products_data(cur, conn, file):
 
 def process_addresses_data(cur, conn, file):
     """
-    Repeating the same process as above,difference is in the query specified to execute
+    Repeating the same process as above, difference is in the query specified to execute
     """
 
     addresses_key = 'orders_data/dim_addresses.csv'
@@ -170,7 +170,7 @@ def process_addresses_data(cur, conn, file):
 
 def process_shipments_data(cur, conn, file):
     """
-    Repeating the same process as above,difference is in the query specified to execute
+    Repeating the same process as above, difference is in the query specified to execute
     """
 
     shipment_key = 'orders_data/shipment_deliveries.csv'
