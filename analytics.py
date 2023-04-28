@@ -22,7 +22,7 @@ def process_agg_public_holiday_data(cur, conn):
     conn.commit()
 
     print(
-        f"data transformed and inserted for agg_public_holiday"
+        "data transformed and inserted for agg_public_holiday"
     )
 
 
@@ -37,7 +37,7 @@ def process_agg_shipments(cur, conn):
     conn.commit()
 
     print(
-        f"data transformed and inserted for agg_shipments"
+        "data transformed and inserted for agg_shipments"
     )
 
 
@@ -52,7 +52,7 @@ def process_best_performing_product(cur, conn):
     conn.commit()
 
     print(
-        f"data transformed and inserted for best_performing_product"
+        "data transformed and inserted for best_performing_product"
     )
 
 
@@ -65,9 +65,9 @@ def analytics_data_model(cur, conn):
     for query in analytics_data_model_queries:
         cur.execute(query)
         conn.commit()
-    # print(
-    # f"Successfully implemented the data model for the analytics area"
-    # )
+    print(
+    "Successfully implemented the data model for the analytics area"
+    )
 
 
 def main():
