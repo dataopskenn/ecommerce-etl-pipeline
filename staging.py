@@ -216,9 +216,9 @@ def staging_data_model(cur, conn):
     for query in staging_data_model_queries:
         cur.execute(query)
         conn.commit()
-        #print(
-        #    f"Successfully implemented the data model for the {query}"
-        #)
+        print(
+           f"Successfully implemented the data model for the {query}"
+        )
 
 
 def main():
