@@ -38,18 +38,6 @@ def process_orders_data(cur, conn, file):
     csv_obj = s3.get_object(
         Bucket=bucket_name, Key=orders_key
     )
-    # body = csv_obj['Body']
-    # csv_string = body.read().decode(
-    #     'utf-8'
-    # ).splitlines()
-
-    # df = csv.reader(csv_string)
-    # next(df, None)
-    # for row in df:
-    #     cur.execute(
-    #         insert_orders_table, row
-    #     )
-    #     conn.commit()
 
     body = csv_obj['Body']
     csv_string = body.read().decode('utf-8')
@@ -78,20 +66,6 @@ def process_reviews_data(cur, conn, file):
     csv_obj = s3.get_object(
         Bucket=bucket_name, Key=reviews_key
     )
-    # body = csv_obj['Body']
-    # csv_string = body.read().decode(
-    #     'utf-8'
-    # ).splitlines()
-
-    # df = csv.reader(csv_string)
-    # next(df, None)
-    # for row in df:
-
-    #     cur.execute(
-    #         insert_reviews_table, row
-    #     )
-
-    #     conn.commit()
 
     body = csv_obj['Body']
     csv_string = body.read().decode('utf-8')
@@ -120,20 +94,6 @@ def process_customers_data(cur, conn, file):
     csv_obj = s3.get_object(
         Bucket=bucket_name, Key=customers_key
     )
-    # body = csv_obj['Body']
-    # csv_string = body.read().decode(
-    #     'utf-8'
-    # ).splitlines()
-
-    # df = csv.reader(csv_string)
-    # next(df, None)
-    # for row in df:
-
-    #     cur.execute(
-    #         insert_dim_customers_table, row
-    #     )
-
-    #     conn.commit()
 
     body = csv_obj['Body']
     csv_string = body.read().decode('utf-8')
@@ -163,21 +123,6 @@ def process_products_data(cur, conn, file):
         Bucket=bucket_name, Key=products_key
     )
 
-    # body = csv_obj['Body']
-    # csv_string = body.read().decode(
-    #     'utf-8'
-    # ).splitlines()
-
-    # df = csv.reader(csv_string)
-    # next(df, None)
-    # for row in df:
-
-    #     cur.execute(
-    #         insert_dim_product_table, row
-    #     )
-
-    #     conn.commit()
-
     body = csv_obj['Body']
     csv_string = body.read().decode('utf-8')
 
@@ -205,21 +150,6 @@ def process_addresses_data(cur, conn, file):
     csv_obj = s3.get_object(
         Bucket=bucket_name, Key=addresses_key
     )
-
-    # body = csv_obj['Body']
-    # csv_string = body.read().decode(
-    #     'utf-8'
-    # ).splitlines()
-
-    # df = csv.reader(csv_string)
-    # next(df, None)
-    # for row in df:
-
-    #     cur.execute(
-    #         insert_dim_addresses_table, row
-    #     )
-
-    #     conn.commit()
 
     body = csv_obj['Body']
     csv_string = body.read().decode('utf-8')
