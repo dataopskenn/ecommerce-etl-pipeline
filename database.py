@@ -40,7 +40,7 @@ def create_database_connection():
 Execute SCHEMA queries
 - First execute the DROP SCHEMA query
 - Then execute the CREATE SCHEMA query
-This step is important when there is need to starta fresh ETL setup
+This step is important when there is need to start a fresh ETL setup
 :return: returns nothing
 """
 
@@ -49,9 +49,9 @@ def drop_schema(cur, conn):
     for query in drop_schema_queries:
         cur.execute(query)
         conn.commit()
-        #print(
-        #    f"Done dropping the {query} schema"
-        #)
+        print(
+           f"Done dropping the {query} schema"
+        )
 
     print("Dropped Schemas")
 
@@ -61,9 +61,9 @@ def create_schema(cur, conn):
     for query in create_schema_queries:
         cur.execute(query)
         conn.commit()
-        #print(
-        #    f"Done creating the {query} schema"
-        #)
+        print(
+           f"Done creating the {query} schema"
+        )
 
     print("Created Schemas")
 
@@ -84,9 +84,9 @@ def drop_tables(cur, conn):
     for query in drop_queries:
         cur.execute(query)
         conn.commit()
-        #print(
-        #    f"Done dropping the {query} table"
-        #)
+        print(
+           f"Done dropping the {query} table"
+        )
 
     print("Successfully dropped tables")
 
@@ -106,9 +106,9 @@ def create_tables(cur, conn):
     for query in create_queries:
         cur.execute(query)
         conn.commit()
-        #print(
-        #    f"Done creating the {query} table"
-        #)
+        print(
+           f"Done creating the {query} table"
+        )
 
     print("Successfully created tables")
 
